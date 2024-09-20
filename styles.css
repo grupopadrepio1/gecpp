@@ -1,0 +1,199 @@
+/* Estilos gerais */
+html {
+    font-size: calc(1rem + 0.25vw); /* Tipografia fluida */
+}
+
+body, html {
+    background-color: #0e375f;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #66431a;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 24vh;
+    z-index: 1000;
+    flex-direction: column; /* Ajusta layout para centralizar */
+    text-align: center;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header .menu, header .title {
+    display: block;
+    margin: 10px 0;
+}
+
+header button {
+    margin-top: 10px;
+}
+
+/* Botão só visível em telas móveis */
+#toggle-menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Esconde o botão por padrão */
+}
+
+/* Exibe o botão apenas em telas menores */
+@media (max-width: 768px) {
+    #toggle-menu {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        transition: all 0.3s ease-in-out; /* Animação de transição suave */
+    }
+
+    nav ul.show-menu {
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        width: 100vw;
+        background-color: #333;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        padding: 1rem 0;
+    }
+}
+
+.title {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blanchedalmond;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1.25rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    width: 80%;    
+    margin: 3vh auto 0 auto; /* Centraliza o conteúdo */
+    padding: 0.5rem;
+    background-color: #2e669b;
+}
+
+.grid-container {
+    display: block; /* Fallback para navegadores antigos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-gap: 1.25rem;
+}
+
+.news-item {
+    background-color: #89c5c2;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+}
+
+.news-item img {
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço, cortando bordas se necessário */
+    border-radius: 0.3125rem;
+}
+
+.news-item h2 {
+    font-size: 1.2rem;
+    margin-top: 0.625rem;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+
+main.texto {
+    width: 60%; /* Define a largura do main em telas maiores */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.textual {
+    font-family: 'Arial', sans-serif; /* Fonte para leitura web */
+    text-align: justify; /* Justifica o texto */
+    color: #ffffff; /* Cor do texto suave para leitura */
+    line-height: 1.6; /* Altura das linhas para facilitar a leitura */
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+}
+
+@media (max-width: 768px) {
+    main.texto {
+        width: 90%; /* Reduz a largura do main em telas menores */
+        padding: 10px; /* Ajusta o padding para telas pequenas */
+    }
+    
+    .textual {
+        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+        font-size: 1rem; /* Ajusta o tamanho da fonte para melhor leitura */
+    }
+}
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    
+    padding: 1rem;
+    bottom: 0;
+    width: 100vw;
+}
+
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+    }
+
+    
+}

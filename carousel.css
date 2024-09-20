@@ -1,0 +1,77 @@
+.carousel {
+    position: relative;
+    max-width: 100%; /* Limita a largura ao tamanho da tela */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    overflow: hidden;
+    padding: 1em; /* Reduzir o padding para evitar espaço extra */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do carrossel */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    border-radius: 1rem; /* Bordas arredondadas usando rem */
+    overflow: hidden; /* Para ocultar partes da imagem que ultrapassam as bordas arredondadas */
+    box-shadow: 0 0.25rem 1rem rgba(255, 255, 255, 0.2); /* Sombra suave com valores em rem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    font: 800;
+    color: beige;
+}
+
+.carousel-item.active {
+    display: block;
+    transform: scale(1.05); /* Leve aumento no item ativo para destacar */
+}
+
+.carousel img {
+    width: 100%; /* Ajusta para 100% da largura do contêiner */
+    max-width: 800px; /* Largura máxima ajustada para viewport */
+    height: 500px; /* Altura ajustada para viewport */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    border-radius: 1rem; /* Bordas arredondadas em unidades flexíveis */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2e669b;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem; /* Ajusta o padding para um botão menor */
+    z-index: 10;
+}
+
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2e669b;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem; /* Ajusta o padding para um botão menor */
+    z-index: 10;
+}
+
+.prev {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel img {
+        max-width: 80vw; /* Ajusta a largura máxima em telas menores */
+        height: auto; /* Permite que a altura se ajuste de acordo com a proporção da largura */
+    }
+
+    .carousel-control {
+        padding: 0.1rem; /* Botões menores em telas pequenas */
+    }
+}
